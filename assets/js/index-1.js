@@ -1,5 +1,5 @@
 
-  // let layer = layui.msg
+  // let layer = layui.layer
   function getUserInfo(){
     $.ajax({
       method:'GET',
