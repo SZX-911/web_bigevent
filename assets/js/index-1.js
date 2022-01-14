@@ -1,17 +1,4 @@
-$(function(){
-  getUserInfo()
-  let layer = layui.layer
-  $('#btnLogout').on('click',function(){
-    // 从layui中的  提示用户是否确认退出 询问框
-    layer.confirm('确定退出登录？',{icon:3,title:'提示'},function(index){
-      //清除本地存储的token
-      localStorage.removeItem('token')
-      //跳转另一个页面
-      location.href='/login-1.html'
-      //关闭confirm 询问框
-      layer.close(index)
-    })
-  })
+
   // let layer = layui.msg
   function getUserInfo(){
     $.ajax({
@@ -40,6 +27,21 @@ $(function(){
     })
   } 
 
+
+  getUserInfo()
+  let layer = layui.layer
+  $('#btnLogout').on('click',function(){
+    // 从layui中的  提示用户是否确认退出 询问框
+    layer.confirm('确定退出登录？',{icon:3,title:'提示'},function(index){
+      //清除本地存储的token
+      localStorage.removeItem('token')
+      //跳转另一个页面
+      location.href='/login-1.html'
+      //关闭confirm 询问框
+      layer.close(index)
+    })
+  })
+
       //渲染用户信息
      function renderAvatar(user){
        let name = user.nickname || user.username
@@ -54,5 +56,3 @@ $(function(){
        }
 
      }
-  
-})
