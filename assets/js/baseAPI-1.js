@@ -19,7 +19,7 @@ $.ajaxPrefilter(function(option){
           // 强制清空 token
           localStorage.removeItem('token')
           //跳转另一个页面
-          location.href = '/login-1.html'
+          location.href = '/login.html'
         }
  
   }
