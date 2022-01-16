@@ -35,6 +35,10 @@ $(function(){
     .attr('src', imgURL) // 重新设置图片路径
     .cropper(options) // 重新初始化裁剪区域
 })
+
+// - 为确定按钮，绑定点击事件
+// - 要拿到用户裁剪之后的头像
+//   - 创建一个 Canvas 画布，将 Canvas 画布上的内容，转化为 `base64` 格式的字符串
   $('#btnUpload').on('click',function(){
     //拿到用户裁剪的数据-裁减之后的头像
     let $image = $('#image')
@@ -44,7 +48,8 @@ $(function(){
         height: 100
       })
       .toDataURL('image/png')       // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
-      console.log(66);
+      // console.log(66);
+        // 把base64 格式的字符串 放到服务器里
       $.ajax({
         method:'POST',
         url:'/my/update/avatar',

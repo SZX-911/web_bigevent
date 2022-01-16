@@ -55,7 +55,7 @@
        let name = user.nickname || user.username
        $('#welcome').html('欢迎 &nbsp;' +name)
        if(user.user_pic!==null){
-        console.log( $('.layui-nav-img'));
+        // console.log( $('.layui-nav-img'));
          $('.text-avatar').hide()
          $('.layui-nav-img').attr('src',user.user_pic).show()
        }else{

@@ -2,7 +2,7 @@ $(function(){
   let layer = layui.layer
   let form = layui.form
   initArtCateList()
-  // 利用模板引擎  模板 来从数据库获取数据
+  // 利用模板引擎渲染列表数据  模板 来从数据库获取数据
   function initArtCateList(){
     $.ajax({
       url:'/my/article/cates',
@@ -17,11 +17,12 @@ $(function(){
       }
     })
   }
+  // 定义个变量为null
   let indexAdd = null
   // 点击添加按钮  会弹出文本框
   $('#btnAddCate').on('click',function(){
 
- indexAdd = layer.open({
+    indexAdd = layer.open({
       type: 1, 
       // area:['500px','250px'],
       area: ['500px', '300px'],
