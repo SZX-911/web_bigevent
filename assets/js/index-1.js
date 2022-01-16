@@ -23,6 +23,14 @@
         
         renderAvatar(res.data)
       },
+      // complete:function(res){
+      //   console.log(res);
+      //   console.log('执行了complete函数')
+      //   if(res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！'){
+      //     localStorage.removeItem('token')
+      //     location.href = '/login-1.html'
+      //   }
+      // }
    
     })
   } 
@@ -47,8 +55,9 @@
        let name = user.nickname || user.username
        $('#welcome').html('欢迎 &nbsp;' +name)
        if(user.user_pic!==null){
+        console.log( $('.layui-nav-img'));
          $('.text-avatar').hide()
-         $('.layui-nav-img').attr('src'+user.user_pic).show()
+         $('.layui-nav-img').attr('src',user.user_pic).show()
        }else{
         $('.layui-nav-img').hide()
           let first = name[0].toUpperCase()
