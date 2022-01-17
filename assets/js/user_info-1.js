@@ -33,7 +33,7 @@ $(function(){
     //渲染
       initUserInfo()
   })
-  //监听表单 发起请求用户信息
+  //监听表单 发起请求用户信息  提交
   $('.layui-form').on('submit',function(e){
     //阻止表单默认提交行为默认
     e.preventDefault()

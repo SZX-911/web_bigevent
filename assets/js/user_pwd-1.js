@@ -21,7 +21,7 @@ $(function(){
 
   })
 
-  // 监听表单 发送请求
+  // 监听表单 发送请求 提交
   $('.layui-form').on('submit',function(e){
     //阻止表单默认行为
     e.preventDefault()
@@ -35,6 +35,7 @@ $(function(){
           return layer.msg('更新失敗')
 
         }layer.msg('更新成功')
+        // 清空一下表单表面数据
         $('.layui-form')[0].reset()
       }
     })

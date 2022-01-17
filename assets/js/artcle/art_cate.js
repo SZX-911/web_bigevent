@@ -50,6 +50,7 @@ $(function(){
 
   })
 
+
   let indexEdit = null
   // 通过代理 为btn-edit 编辑/修改按钮 绑定事件
   $('tbody').on('click','.btn-edit',function(){
@@ -90,6 +91,8 @@ $(function(){
     })
 
   })
+
+  
   // 通过事件委托的方式 给删除的按钮 click事件
   $('body').on('click','.btn-delete',function(){
     // 获取点击该按钮 是哪个id
